@@ -1,0 +1,111 @@
+.navbar{
+    margin: 0;
+}
+#nav ul li{
+    text-align: center;
+}
+#nav ul li:hover{
+    background-color: white;
+}
+#nav ul li a{
+   padding: 30px 20px;
+}
+#nav .navbar-header{
+    padding-top: 25px;
+}
+#investment{
+    margin-top: 30px;
+}
+#investment .panel{
+    border: none;
+}
+#investment .panel .panel-body{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    align-items: center;
+}
+#investment .panel .panel-body >div{
+    font-size: 30px;
+    flex: 4;
+}
+#investment .panel .panel-body >div div{
+    text-align: center;
+    border-bottom: 3px solid #00a8ff;
+    color: #00a8ff;
+    width: 155px;
+    font-weight: bold;
+}
+#investment .row .panel>.panel-body.one >div div{
+    text-align: center;
+    border-bottom: 3px solid #00a8ff;
+    width: 200px;
+}
+#investment .row .panel>.panel-body.two >div div,
+#investment .row .panel>.panel-body.three >div div,
+#investment .row .panel>.panel-body.four >div div{
+    text-align: center;
+    border-bottom: 3px solid #00a8ff;
+    width: 120px;
+}
+#investment .panel .panel-body a{
+    flex: 1;
+}
+#investment thead {
+    color: black;
+    font-weight: bold;
+}
+#investment .row tr:hover{
+    color: #00a8ff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.feature{
+    margin-top: 20px;
+}
+
+.feature > div > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.feature > div > div {
+
+}
+.feature p{
+    color: #c0c0c0;
+}
+
+.el-footer {
+    background-color: #f8f8f8;
+    margin: 20px 0px 20px 0px;
+    padding-top: 30px;
+}
+
+.el-footer img {
+    max-width: 100%;
+}
