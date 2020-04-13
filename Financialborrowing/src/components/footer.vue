@@ -45,29 +45,12 @@
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss" type="text/scss" module>
-    .feature{
-        margin-top: 20px;
-    }
-
-    .feature > div > div{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .feature > div > div {
-
-    }
-    .feature p{
-        color: #c0c0c0;
-    }
-
     .el-footer {
         background-color: #f8f8f8;
         margin: 20px 0px 20px 0px;
         padding-top: 30px;
-    }
-
-    .el-footer img {
-        max-width: 100%;
+        img {
+            max-width: 100%;
+        }
     }
 </style>

@@ -26,25 +26,7 @@
                 </div>
             </div>
         </nav>
-        <!--导航nav-->
-        <div class="navbar navbar-default" id="nav">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="index.html">
-                        <img alt="Brand" src="../images/logo.png">
-                    </a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">首页</a></li>
-                    <li><a href="invest.html">我要投资</a></li>
-                    <li><a href="borrow.html">我要借款</a></li>
-                    <li><a href="personal.html">个人中心</a></li>
-                    <li><a href="#">新手指引</a></li>
-                    <li><a href="#">关于我们</a></li>
-                </ul>
-            </div>
 
-        </div>
     </div>
 </template>
 
@@ -58,20 +40,5 @@
     .navbar{
         margin: 0;
     }
-    #nav{
-        .navbar-header{
-            padding-top: 25px;
-        }
-        ul{
-            li{
-                &:hover{
-                    background-color: white;
-                }
-                text-align: center;
-                a{
-                    padding: 30px 20px;
-                }
-            }
-        }
-    }
+
 </style>
