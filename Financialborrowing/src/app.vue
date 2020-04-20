@@ -3,24 +3,7 @@
         <!--头部-->
         <vue_header></vue_header>
         <!--导航nav-->
-        <div class="navbar navbar-default" id="nav">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="index.html">
-                        <img alt="Brand" src="./images/logo.png">
-                    </a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a>首页</a></li>
-                    <li><a>我要投资</a></li>
-                    <li><a>我要借款</a></li>
-                    <li><a>个人中心</a></li>
-                    <li><a >新手指引</a></li>
-                    <li><a >关于我们</a></li>
-                </ul>
-            </div>
-
-        </div>
+        <vue_nav :isShow="isShow" :msg="msg"></vue_nav>
         <!--中间路由-->
         <transition>
             <router-view></router-view>
@@ -33,37 +16,60 @@
 <script>
     import vue_header from './components/header.vue';
     import vue_footer from './components/footer.vue'
+    import vue_nav from './components/nav.vue';
 
     export default {
         name: "",
-        components:{
+        data(){
+          return{
+              msg:'',
+              isShow:true
+          }
+        },
+        components: {
             vue_header,
-            vue_footer
+            vue_footer,
+            vue_nav
+        },
+        watch: {
+            '$route':'getPath'
         },
         methods:{
-
-        }
-    }
-</script>
-
-<style scoped lang="less" rel="stylesheet/less" type="text/less" module>
-    #nav{
-        .navbar-header{
-            padding-top: 25px;
-        }
-        ul{
-            li{
-                &:hover{
-                    background-color: white;
+            getPath(){
+                if (this.$route.path === '/login'){
+                    this.isShow =false;
+                    this.msg = '欢迎登录'
+                }else if(this.$route.path === '/register'){
+                    this.isShow =false;
+                    this.msg = '欢迎注册'
+                } else if(this.$route.path === '/recharge'){
+                    this.isShow =false;
+                    this.msg = '账户充值'
+                }else {
+                    this.isShow =true;
+                    this.msg= '';
                 }
-                text-align: center;
-                a{
-                    padding: 30px 20px;
-                }
+            }
+        },
+        created(){
+
+            if (this.$route.path === '/login'){
+                this.isShow =false;
+                this.msg = '欢迎登录'
+            }else if(this.$route.path === '/register'){
+                this.isShow =false;
+                this.msg = '欢迎注册'
+            }else if(this.$route.path === '/recharge'){
+                this.isShow =false;
+                this.msg = '账户充值'
+            }else {
+                this.isShow =true;
+                this.msg= '';
             }
         }
     }
 
+</script>
 
-
+<style scoped lang="less" rel="stylesheet/less" type="text/less" module>
 </style>

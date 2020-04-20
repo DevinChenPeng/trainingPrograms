@@ -63,51 +63,7 @@
         </div>
         <!--投资列表-->
         <div class="container " id="investment">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div>
-                        <div>进行中借款</div>
-                    </div>
-                    <a href="#" class="text-right">进入投资列表</a>
-                </div>
-                <table class="table table-hover text-left">
-                    <thead>
-                    <tr>
-                        <td>借款人</td>
-                        <td>借款标题</td>
-                        <td>年利率</td>
-                        <td>金额</td>
-                        <td>还款方式</td>
-                        <td>进度</td>
-                        <td class="text-center">操作</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>张三</td>
-                        <td>给我2000度过难关</td>
-                        <td>10.00%</td>
-                        <td>2,000.00</td>
-                        <td>按月分期还款</td>
-                        <td>78.00%</td>
-                        <td class="text-center">
-                            <button class="btn btn-danger">查看</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>王五</td>
-                        <td>江湖救急，借100吃饭</td>
-                        <td>12.00%</td>
-                        <td>100.00</td>
-                        <td>按月到期还款</td>
-                        <td>100.00%</td>
-                        <td class="text-center">
-                            <button class="btn btn-danger">查看</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <List></List>
             <div class="row">
                 <div class="col-lg-6 col-sm-12">
                     <div class="panel panel-default">
@@ -219,8 +175,12 @@
 </template>
 
 <script>
+    import List from '../components/list.vue'
     export default {
-        name: ""
+        name: "",
+        components:{
+            List
+        }
     }
 </script>
 
